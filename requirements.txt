@@ -1,0 +1,6 @@
+fastapi
+pandas
+aiofile
+uvicorn
+python-multipart
+openpyxl
