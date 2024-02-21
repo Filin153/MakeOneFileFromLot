@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 import re
 import zipfile
+import subprocess
 
 def get_info_from_name_disc(data: str) -> dict:
     info = data.split("\t")[-1].split("-")
@@ -79,11 +80,12 @@ def add_new_time(t: list) -> list:
     return res
 
 def make_file_from(path: str, save_path: str):
-    with zipfile.ZipFile(path, "r") as zip_data:
-        path = path.split(".")[0]
-        zip_data.extractall(path)
-        zip_data.close()
+    # with zipfile.ZipFile(path, "r") as zip_data:
+    #     path = path.split(".")[0]
+    #     zip_data.extractall(path)
+    #     zip_data.close()
 
+    subprocess.run(["unzip", path, "-d", path.split('.')[0]], "&>", "/dev/null")
 
     res_data = {
         "Путь до файла": [],

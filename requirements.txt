@@ -4,3 +4,4 @@ aiofile
 uvicorn
 python-multipart
 openpyxl
+Jinja2

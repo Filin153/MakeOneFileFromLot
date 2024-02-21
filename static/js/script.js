@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append('file', file);
 
 
-    fetch('http://localhost:8000/file/load', {
+    fetch('https://solid-telegram-jpprxjxrv9wcj796-8000.app.github.dev/file/load', {
         method: 'POST',
         body: formData
     })
